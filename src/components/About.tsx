@@ -21,59 +21,72 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="py-20 bg-white dark:bg-gray-900">
+    <section id="about" className="py-20">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-          <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
-            About Me
-          </span>
-        </h2>
+        {/* Title */}
+        <div className="flex justify-center mb-16">
+          <h2 className="text-6xl font-bold font-['Space_Grotesk'] relative inline-block">
+            <span className="relative z-10 text-black">About Me</span>
+            <div className="absolute inset-0 bg-[#FF90E8] -z-10 transform rotate-1"></div>
+          </h2>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-            I have a <strong>5-year track record</strong> in spearheading mobile app and game innovation, solidifying a robust presence in the software development landscape. 
-            I possess advanced proficiency with full-stack technologies such as <strong>React, MongoDB, PostgreSQL, Flask, and OpenAI integration</strong>. 
-            I have successfully engineered several LLM applications, leveraging <strong>OpenAI and Llama 3.1</strong>, to amplify product functionality and enhance the end-user experience. 
-            Additionally, I have published <strong>2 mobile games and 1 dairy inventory app</strong> on both the Play Store and iOS.
-            </p>
+            {/* First Text Box */}
+            <div className="bg-white border-4 border-black p-6 transform -rotate-1 shadow-brutal">
+              <p className="text-xl text-black leading-relaxed">
+                I have a <span className="bg-[#FFE600] px-2 py-1 border-2 border-black inline-block transform rotate-1">
+                  5-year track record
+                </span> in spearheading mobile app and game innovation, solidifying a robust presence in the software development landscape.
+              </p>
+            </div>
             
-            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              <strong>I am currently pursuing my Masters at Illinois Institute of Technology, Chicago</strong> and am looking for full-time or internship opportunities as a full stack web and mobile developer. 
-              I specialize in <strong>React, Node.js, Flask, and Next.js frameworks</strong>, with a strong emphasis on building performant applications that provide exceptional user experiences.
-            </p>
+            {/* Second Text Box */}
+            <div className="bg-white border-4 border-black p-6 transform rotate-1 shadow-brutal">
+              <p className="text-xl text-black leading-relaxed">
+                I possess advanced proficiency with full-stack technologies such as <span className="bg-[#7DF9FF] px-2 py-1 border-2 border-black inline-block transform -rotate-1">
+                  React, MongoDB, PostgreSQL, Flask, and OpenAI integration
+                </span>.
+              </p>
+            </div>
 
-            <div className="flex flex-wrap gap-3">
+            {/* Skills */}
+            <div className="flex flex-wrap gap-3 mt-8">
               {skills.map((skill) => (
                 <span
                   key={skill}
-                  className="px-4 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full text-sm"
+                  className="px-4 py-2 bg-[#6FFF7D] text-black font-bold border-2 border-black transform hover:rotate-2 transition-transform shadow-brutal"
                 >
                   {skill}
                 </span>
               ))}
             </div>
+
+            {/* Download Button */}
             <button 
               onClick={handleDownload}
-              className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-medium transition-colors"
+              className="bg-[#FFB800] text-black px-8 py-4 text-xl font-bold flex items-center gap-2 border-4 border-black transform hover:-rotate-2 transition-transform shadow-brutal"
             >
-              <Download className="w-5 h-5" />
+              <Download className="w-6 h-6" />
               Download Resume
             </button>
           </div>
 
+          {/* Image Section */}
           <div className="relative">
-            <div className="aspect-square rounded-2xl overflow-hidden">
+            <div className="border-4 border-black bg-[#FF6B6B] p-4 transform rotate-2 shadow-brutal">
               <img
                 src={work_station}
                 alt="About Me"
-                className="w-full h-full object-cover"
+                className="w-full border-2 border-black"
               />
+              <div className="absolute bottom-8 left-8">
+                <p className="bg-black text-white px-4 py-2 text-lg font-bold border-2 border-white transform -rotate-2">
+                  this is where the magic happens 🪄
+                </p>
+              </div>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/20 to-transparent rounded-2xl"></div>
-            <p className="absolute bottom-2 left-2 text-white text-sm bg-black bg-opacity-50 px-2 py-1 rounded">
-              this is where the magic happens 🪄
-            </p>
           </div>
         </div>
       </div>

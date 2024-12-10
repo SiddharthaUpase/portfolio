@@ -41,21 +41,22 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-gray-900">
+    <section id="projects" className="py-20">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-          <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
-            Featured Projects
-          </span>
-        </h2>
+        <div className="flex justify-center mb-16">
+          <h2 className="text-6xl font-bold font-['Space_Grotesk'] relative inline-block">
+            <span className="relative z-10 text-black">Featured Projects</span>
+            <div className="absolute inset-0 bg-[#7DF9FF] -z-10 transform rotate-1"></div>
+          </h2>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow flex flex-col h-full"
+              className="bg-white border-4 border-black transform hover:rotate-1 transition-transform shadow-brutal"
             >
-              <div className="w-full bg-gray-900">
+              <div className="border-b-4 border-black">
                 <YouTube 
                   videoId={project.videoId} 
                   opts={opts} 
@@ -64,44 +65,49 @@ export default function Projects() {
                 />
               </div>
 
-              <div className="p-6 flex flex-col flex-grow">
+              <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-bold">{project.name}</h3>
-                  <span className="text-sm text-gray-500 dark:text-gray-400">{project.duration}</span>
+                  <h3 className="text-2xl font-bold bg-[#FFE600] px-4 py-2 border-2 border-black transform -rotate-1">
+                    <span className="text-black">{project.name}</span>
+                  </h3>
+                  <span className="bg-[#FF90E8] px-4 py-2 border-2 border-black transform rotate-1">
+                    <span className="text-black">{project.duration}</span>
+                  </span>
                 </div>
 
-                <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+                <p className="text-lg text-black mb-4 border-l-4 border-black pl-4">
                   {project.description}
                 </p>
 
-                <ul className="list-disc list-inside space-y-2 mb-4 text-gray-600 dark:text-gray-300 text-sm">
+                <ul className="space-y-4 mb-6">
                   {project.achievements.map((achievement, idx) => (
-                    <li key={idx}>{achievement}</li>
+                    <li key={idx} className="flex items-start">
+                      <span className="mr-2 text-2xl text-black">→</span>
+                      <span className="text-black">{achievement}</span>
+                    </li>
                   ))}
                 </ul>
 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-3 mb-6">
                   {project.technologies.map((tech, idx) => (
                     <span
                       key={idx}
-                      className="px-2 py-1 text-xs bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full"
+                      className="px-4 py-2 bg-[#6FFF7D] text-black font-bold border-2 border-black transform hover:rotate-2 transition-transform"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex gap-4 mt-auto">
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors text-sm"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    Live Demo
-                  </a>
-                </div>
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#FFB800] text-black px-6 py-3 border-4 border-black inline-flex items-center gap-2 transform hover:-rotate-2 transition-transform shadow-brutal font-bold"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  Live Demo
+                </a>
               </div>
             </div>
           ))}

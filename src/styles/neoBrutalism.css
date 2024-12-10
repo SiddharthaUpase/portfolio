@@ -1,0 +1,80 @@
+.neo-brutal-box {
+  border: 4px solid #000000;
+  box-shadow: 8px 8px 0px #000000;
+  padding: 1.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.neo-brutal-button {
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.neo-brutal-button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #000000;
+}
+
+/* Dark mode overrides */
+.dark .neo-brutal-box,
+.dark .neo-brutal-button {
+  border-color: #ffffff;
+  box-shadow: 8px 8px 0px #ffffff;
+}
+
+.dark .neo-brutal-button:hover {
+  box-shadow: 6px 6px 0px #ffffff;
+}
+
+/* Add these new styles */
+.shadow-brutal {
+  box-shadow: 8px 8px 0px #000000;
+}
+
+.shadow-brutal:hover {
+  box-shadow: 12px 12px 0px #000000;
+}
+
+/* Star decoration */
+.star-decoration {
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+/* Card styles */
+.neo-card {
+  background: white;
+  border: 4px solid black;
+  box-shadow: 8px 8px 0px #000000;
+  transition: all 0.2s ease-in-out;
+}
+
+.neo-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0px #000000;
+}
+
+/* Button styles */
+.neo-button {
+  background: white;
+  border: 4px solid black;
+  box-shadow: 4px 4px 0px #000000;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+.neo-button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #000000;
+}
+
+/* Text highlight */
+.highlight {
+  background: #FFE600;
+  padding: 0 0.5rem;
+  border: 2px solid black;
+  display: inline-block;
+  transform: rotate(-2deg);
+} 

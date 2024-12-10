@@ -32,51 +32,50 @@ const education = [
 
 export default function Education() {
   return (
-    <section id="education" className="py-20 bg-white dark:bg-gray-900">
+    <section id="education" className="py-20">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-          <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
-            Education
-          </span>
+        <h2 className="text-5xl font-bold text-center mb-16 font-['Space_Grotesk'] relative inline-block">
+          <span className="relative z-10">Education</span>
+          <div className="absolute inset-0 bg-[#7DF9FF] -z-10 transform -rotate-1"></div>
         </h2>
 
-        <div className="space-y-8">
+        <div className="space-y-12">
           {education.map((edu, index) => (
             <div
               key={index}
-              className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+              className="neo-brutal-box bg-white dark:bg-gray-900 transform hover:rotate-1 transition-transform"
             >
-              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-6">
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                  <h3 className="text-2xl font-bold bg-[#FFE600] inline-block px-2 transform -rotate-1 border border-black">
                     {edu.school}
                   </h3>
-                  <p className="text-purple-600 dark:text-purple-400 font-medium">
+                  <p className="text-xl font-bold mt-2 bg-[#FF90E8] inline-block px-2 border border-black">
                     {edu.degree}
                   </p>
-                  <p className="text-gray-500 dark:text-gray-400 text-sm">
+                  <p className="mt-1 font-bold">
                     {edu.location}
                   </p>
                 </div>
-                <div className="mt-2 md:mt-0 text-right">
-                  <p className="text-gray-500 dark:text-gray-400">
+                <div className="mt-4 md:mt-0">
+                  <p className="bg-[#6FFF7D] px-2 inline-block transform rotate-1 border border-black">
                     {edu.duration}
                   </p>
-                  <p className="text-purple-600 dark:text-purple-400 font-medium">
+                  <p className="mt-2 font-bold bg-[#FFB800] px-2 inline-block border border-black">
                     GPA: {edu.gpa}
                   </p>
                 </div>
               </div>
 
-              <div className="mt-4">
-                <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+              <div className="mt-6">
+                <h4 className="text-xl font-bold mb-4 border-l-4 border-black dark:border-white pl-4">
                   Relevant Coursework
                 </h4>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-3">
                   {edu.coursework.map((course, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 text-sm bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full"
+                      className="px-3 py-1 bg-[#FF6B6B] text-black font-bold border-2 border-black transform hover:-rotate-2 transition-transform"
                     >
                       {course}
                     </span>
