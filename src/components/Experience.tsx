@@ -10,6 +10,19 @@ import image5 from '../assets/images/Funzy/5.png';
 
 const experiences = [
   {
+    title: 'Full Stack Developer',
+    company: 'Tasker AI (YC 2020)',
+    location: 'San Francisco, CA',
+    duration: 'Jan 2025 - Present',
+    responsibilities: [
+      'Currently working on <strong>AI-powered browser agents</strong> that perform real-time screen analysis and automate modifications, enhancing user interaction and efficiency.',
+      'In the process of building and deploying <strong>end-to-end Firebase applications</strong>, leveraging <strong>Vanilla HTML, CSS</strong> for frontend design, and <strong>Firebase Cloud Functions</strong> with <strong>Node.js</strong> for backend operations, improving application performance.',
+      'Implementing <strong>GitHub Actions</strong> to automate deployment processes, which is leading to a streamlined <strong>CI/CD workflow</strong> and minimizing release-related errors, optimizing overall project delivery.',
+      'Contributing to a high-speed <strong>startup environment</strong> by developing <strong>scalable and intelligent solutions</strong> that facilitate rapid growth and adaptability in automation technologies.'
+    ],
+    technologies: ['Firebase', 'Node.js', 'HTML/CSS', 'GitHub Actions', 'AI', 'Cloud Functions']
+  },
+  {
     title: 'Founder',
     company: 'Funzy',
     location: 'Chicago, IL, USA',
